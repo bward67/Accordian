@@ -1,0 +1,124 @@
+/*
+Mobile: 375px
+- Desktop: 1440px
+*/
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --clr-hover-pink: hsl(293, 87%, 50%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+/*GLOBAL STYLES*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  display: grid;
+  place-items: center;
+}
+.main-container {
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-light-pink);
+}
+
+p {
+  opacity: 50%;
+  font-size: 0.86rem;
+  line-height: 20px;
+  font-weight: var(--fw-400);
+}
+i {
+  font-size: 1.1rem;
+}
+h4:hover {
+  cursor: pointer;
+  color: var(--clr-hover-pink);
+}
+button {
+  background-color: white;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+h4 {
+  font-size: 1.1rem;
+}
+
+.star {
+  margin-right: 1.2rem;
+  width: 8%;
+}
+.bottom-behind {
+  background-color: #f9f0ff;
+}
+.faq-container {
+  width: 320px;
+  margin: -5.7rem auto 6rem auto;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  background-color: var(--clr-white);
+  border-radius: 5px;
+  box-shadow: 1px 2px 6px 1px hsla(292, 16%, 49%, 0.2);
+}
+/*FAQ container styles*/
+.fa-circle-plus {
+  color: var(--clr-hover-pink);
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.individual-qanda-container {
+  padding: 25px 0;
+}
+.question-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+/*HIDE ITEMS WHEN LOADING AND SHOW OTHERS WHEN SELECTING 'show-items' class*/
+.answer,
+.fa-minus-circle {
+  display: none; /*to hide them both when the page first loads*/
+}
+.show-items .fa-minus-circle {
+  display: inline; /*to show the minus btn on the same line when
+  we select the show-items class*/
+}
+.show-items .fa-circle-plus {
+  display: none; /*to hide the plus btn on the same line when
+  we select the show-items class*/
+}
+.show-items .answer {
+  display: block; /*to show the answer when
+  we select the show-items class*/
+}
+
+/*MEDIA QUERIES BREAKPOINT 1440*/
+
+@media (min-width: 576px) {
+  .faq-container {
+    width: 550px;
+    margin-top: -6.9rem;
+    padding-top: 2rem;
+  }
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+  }
+}
